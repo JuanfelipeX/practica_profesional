@@ -1,0 +1,85 @@
+<div class=" d-flex justify-content-center align-items-center h-100">
+    <div class="col-lg-12 col-xl-11">
+        <div class="card-body p-md-4">
+            <div class="row justify-content-center">
+                <!-- Logo imagen registrase -->
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                    <img src={{formulario.imagen}} style="width: 800px; height: 500px; object-fit: cover;" class="img-fluid"
+                        alt="Imagen obtenida de la herramienta de accesibilidad y usabilidad web">
+
+                </div>
+
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                    <!-- Texto registrarse -->
+                    <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4 mt-4">Detalles Herramientas</p>
+
+                    <form class="mx-1 mx-md-2">
+
+                        <!-- Input Nombre -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label fw-bold">Nombre de la Herramienta</label>
+                                    <p  type="text" id="input-nombre" >{{formulario.nombre}}</p>
+                            </div>
+                        </div>
+
+                        <!-- Input Descripción -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label fw-bold">Descripción de la Herramienta</label>
+                                <p  type="text" id="input-descripcion" >{{formulario.descripcion}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <!-- Input Url -->
+                                <div class="d-flex flex-row align-items-center mb-2">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label class="form-label fw-bold">URL</label>
+                                            <p  type="text" id="input-url" >{{formulario.url}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <!-- Input Precio -->
+                                <label class="form-label fw-bold">Precio</label>
+                                <div class="d-flex flex-row align-items-center mb-2">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <p  type="text" id="input-precio" >{{formulario.precio}}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Input Etiquetas -->
+                        <!-- <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label">Etiquetas</label>
+                                <input type="text" id="input-pais" class="form-control" [(ngModel)]="formulario.pais"
+                                    name="pais" required />
+                            </div>
+                        </div> -->
+
+                        <!-- Input Proveedor -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label fw-bold">Proveedor</label>
+                                    <p  type="text" id="input-provedor" >{{formulario.provedor}}</p>
+                            </div>
+                        </div>
+
+                        <!-- Input Normas -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label fw-bold">Normas</label>
+                                    <p  type="text" id="input-normas" >{{formulario.normas}}</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

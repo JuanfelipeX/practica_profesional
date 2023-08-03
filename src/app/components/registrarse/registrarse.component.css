@@ -1,0 +1,27 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+input[type="text"] {
+  font-size: 14px;
+}
+
+input[type="phone"] {
+  font-size: 14px;
+}
+
+input[type="email"] {
+  font-size: 14px;
+}
+
+input[type="password"] {
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+
+}

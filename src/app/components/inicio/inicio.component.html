@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<div class="jumbotron jumbotron-fluid bg-light pb-5">
+    <div class="container text-center">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <img src="https://support.content.office.net/es-es/media/49fe0e52-e146-49a4-8572-059fed535096.png"
+            class="img-fluid mx-auto d-block" alt="Descripción de la imagen">
+        <a id="boton-scroll-herramientas" class="btn btn-primary mt-2 btn-lg" href="#seccion-herramientas"
+            role="button">Descubrir mas</a>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center" id="seccion-herramientas">
+    <nav class="navbar navbar-expand-lg">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <form class="form-inline my-2 my-lg-0" >
+                        <div class="input-group mt-4">
+                            <input #inputSearch class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"
+                                style="width: 600px;" (keyup)="onSearch(inputSearch.value)">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="row">
+        <div class="col-4" *ngFor="let element of listaHerrmientas">
+            <div class="card m-2">
+                <div class="">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row size">
+                                <div class="col-11">
+                                    <h4 class="card-title text-center">{{element.nombre}}</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a *ngIf="verificadorBool"
+                                        [href]="'http://localhost:4200/herramienta-actualizar/' + element.id">
+                                        <i class="fa-regular fa-pen-to-square" style="color: #000;"></i>
+                                    </a>
+                                    <a *ngIf="verificadorBool" (click)="borrarHerramienta(element.id)">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </div>
+                                <h6 class="card-text text-black-50 justify-content-center">{{element.descripcion}}</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-center mx-4 mb-4">
+                    <a [href]="'http://localhost:4200/herramienta-detalles/' + element.id">
+                        <button type="button" class="btn btn-primary btn-sm">Ver mas</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

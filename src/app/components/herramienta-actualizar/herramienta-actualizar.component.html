@@ -1,0 +1,101 @@
+<div class=" d-flex justify-content-center align-items-center h-100">
+    <div class="col-lg-12 col-xl-11">
+        <div class="card-body p-md-4">
+            <div class="row justify-content-center">
+                <!-- Logo imagen registrase -->
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                    <img src="https://img.freepik.com/iconos-gratis/navegador_318-290268.jpg" class="img-fluid"
+                        alt="Logo simple para mostrar actualización de herramientas de accesibilidad y usabilidad web">
+                </div>
+
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                    <!-- Texto registrarse -->
+                    <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4 mt-4">Actualizar Herramienta</p>
+
+                    <form class="mx-1 mx-md-2">
+
+                        <!-- Input Nombre -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label">Nombre de la Herramienta</label>
+                                <input type="text" id="input-nombre" class="form-control"
+                                    [(ngModel)]="formulario.nombre" name="nombre" required />
+                            </div>
+                        </div>
+
+                        <!-- Input Descripción -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label">Descripción de la Herramienta</label>
+                                <input type="text" id="input-descripcion" class="form-control"
+                                    [(ngModel)]="formulario.descripcion" name="descripcion" required />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <!-- Input Url -->
+                                <div class="d-flex flex-row align-items-center mb-2">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label class="form-label">URL</label>
+                                        <input type="text" id="input-url"
+                                            class="block w-full py-1 sm:text-sm form-control"
+                                            [(ngModel)]="formulario.url" name="url" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <!-- Input Precio -->
+                                <label class="form-label">Precio</label>
+                                <div class="d-flex flex-row align-items-center mb-2">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <select id="input-precio" [(ngModel)]="formulario.precio" name="precio"
+                                            class="block w-full py-1 sm:text-sm form-control">
+                                            <option value='Pago'>Pago</option>
+                                            <option value='Libre'>Libre</option>
+                                            <option value='Mixto'>Mixto</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Input Etiquetas -->
+                        <!-- <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label">Etiquetas</label>
+                                <input type="text" id="input-pais" class="form-control" [(ngModel)]="formulario.pais"
+                                    name="pais" required />
+                            </div>
+                        </div> -->
+
+                        <!-- Input Proveedor -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label">Proveedor</label>
+                                <input type="text" id="input-provedor" class="form-control"
+                                    [(ngModel)]="formulario.provedor" name="provedor" email required />
+                            </div>
+                        </div>
+
+                        <!-- Input Normas -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label">Normas</label>
+                                <input type="text" id="input-normas" class="form-control"
+                                    [(ngModel)]="formulario.normas" name="normas" required />
+                            </div>
+                        </div>
+
+                        <!-- Botón Actualizar -->
+                        <div class="d-flex justify-content-center mx-4 mb-4">
+                            <button type="button" class="btn btn-primary btn-lg"
+                                (click)="actualizarHerramientas()">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
