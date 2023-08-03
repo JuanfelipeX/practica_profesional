@@ -12,9 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HerramientaComponent } from './components/herramienta/herramienta.component';
-import { HerramientaActualizarComponent } from './components/herramienta-actualizar/herramienta-actualizar.component';
-import { HerramientaDetallesComponent } from './components/herramienta-detalles/herramienta-detalles.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +22,6 @@ import { HerramientaDetallesComponent } from './components/herramienta-detalles/
     InicioComponent,
     HeaderComponent,
     FooterComponent,
-    HerramientaComponent,
-    HerramientaActualizarComponent,
-    HerramientaDetallesComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,4 +34,4 @@ import { HerramientaDetallesComponent } from './components/herramienta-detalles/
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
