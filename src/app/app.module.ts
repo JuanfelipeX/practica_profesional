@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { ActualizacionComponent } from './components/actualizacion/actualizacion.component';
+import { CrearComponent } from './components/crear/crear.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ActualizacionComponent } from './components/actualizacion/actualizacion
     FooterComponent,
     DetallesComponent,
     ActualizacionComponent,
+    CrearComponent,
   ],
   imports: [
     BrowserModule,

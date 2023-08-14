@@ -1,0 +1,16 @@
+<div class="container my-5">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Crear nuevo elemento</h2>
+        <form (ngSubmit)="crearElemento()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nuevoElemento.nombre" required>
+          </div>
+          <!-- Agregar otros campos aquí -->
+          <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

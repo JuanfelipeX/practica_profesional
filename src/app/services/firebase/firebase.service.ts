@@ -15,7 +15,7 @@ export class FirebaseService {
   ) {
   }
 
-  crearDatos(data: any) {
+  crearDato(data: any) {
     const datosRef = collection(this.firestore, 'Cliente');
     return addDoc(datosRef, data);
   }
@@ -34,12 +34,12 @@ export class FirebaseService {
     return null;
   }
 
-  async editarDatos(data: any, id: string): Promise<void> {
+  async editarDato(data: any, id: string): Promise<void> {
     const datosRef = doc(this.firestore, `Cliente/${id}`);
     await setDoc(datosRef, data, { merge: true });
   }
 
-  eliminarDatos(id: number) {
+  eliminarDato(id: number) {
     const datosRef = doc(this.firestore, `Cliente/${id}`);
     return deleteDoc(datosRef);
   }

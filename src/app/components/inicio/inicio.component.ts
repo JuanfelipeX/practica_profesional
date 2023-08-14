@@ -24,7 +24,7 @@ export class InicioComponent implements OnInit {
   // Método para crear datos
   async crearDatos(data: any) {
     try {
-      await this.fireService.crearDatos(data);
+      await this.fireService.crearDato(data);
       this.getDatos();
     } catch (error) {
     }
@@ -55,7 +55,7 @@ export class InicioComponent implements OnInit {
   // Método para editar datos
   async editarDatos(data: any, id: string) {
     try {
-      await this.fireService.editarDatos(data, id);
+      await this.fireService.editarDato(data, id);
       this.getDatos();
     } catch (error) {
     }
@@ -64,7 +64,7 @@ export class InicioComponent implements OnInit {
   // Método para borrar datos
   async borrarDatos(id: any) {
     try {
-      await this.fireService.eliminarDatos(id);
+      await this.fireService.eliminarDato(id);
       this.getDatos();
     } catch (error) {
     }

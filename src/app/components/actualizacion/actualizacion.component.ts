@@ -41,7 +41,7 @@ export class ActualizacionComponent implements OnInit {
   guardarCambios() {
     const id = this.detalle.id;
     const nuevoDato = { nombre: this.nuevoNombre }; // Actualiza otros campos según necesites
-    this.fireService.editarDatos(nuevoDato, id).then(() => {
+    this.fireService.editarDato(nuevoDato, id).then(() => {
       // Actualización exitosa, realizar acciones adicionales si es necesario
       this.modoEdicion = false;
       this.detalle.nombre = this.nuevoNombre; // Actualizar el valor en la vista
