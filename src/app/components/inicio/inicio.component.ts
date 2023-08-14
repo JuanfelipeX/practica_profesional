@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HerramientasService } from 'src/app/services/herramientas/herramientas.service';
+import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,75 +8,71 @@ import { HerramientasService } from 'src/app/services/herramientas/herramientas.
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-  //lista de herramientas
-  listaHerrmientas: any = {};
 
-  // Verificar Logeo
-  verificadorBool: boolean = false;
 
-  // variable para almacenar la consulta de búsqueda
-  query: string = '';
+  listaGetDatos: any = [];
 
   constructor(
-    private HerramientaService: HerramientasService,
+    private fireService: FirebaseService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.verifyLooged();
-    this.getHerramientas();
+    this.getDatos();
   }
 
-  verifyLooged() {
-    if (localStorage.getItem('contrasena')) {
-      this.verificadorBool = true;
-    } else {
-      this.verificadorBool = false;
+  // Método para crear datos
+  async crearDatos(data: any) {
+    try {
+      await this.fireService.crearDatos(data);
+      this.getDatos();
+    } catch (error) {
     }
   }
-
-  /*
-   ************************************************
-   *              TRAER HERRAMIENTAS              *
-   ************************************************
-   */
-  getHerramientas() {
-    this.HerramientaService.obtenerHerramientas().subscribe({
-      next: (data) => {
-        if (this.query) {
-          // filtra los elementos de la lista según la consulta de búsqueda
-          this.listaHerrmientas = data.filter((element: any) =>
-            element.nombre.toLowerCase().includes(this.query.toLowerCase())
-          );
-        } else {
-          this.listaHerrmientas = data;
-        }
+  // Método para obtener los datos
+  getDatos() {
+    this.fireService.obtenerDatos().subscribe({
+      next: (data: any) => {
+        this.listaGetDatos = data;
       },
-      error: (err) => { },
+      error: (err) => {
+      },
     });
   }
 
-  borrarHerramienta(id: any) {
-    this.HerramientaService.eliminarHerramienta(id).subscribe({
-      next: (data) => {
-        window.location.reload();
-      },
-      error: (err) => { },
-    });
-  }
-
-  /*
-  ************************************************
-  *                    BUSQUEDA                  *
-  ************************************************
-  */
-  onSearch(value: string) {
-    if (value && value.length > 3) {
-      this.query = value; // actualiza la variable de consulta
-      this.getHerramientas(); // filtra la lista de herramientas
-    } else {
-      this.query = '';
-      this.getHerramientas();
+  // Método para obtener datos por ID
+  async obtenerDatosPorId(id: string) {
+    try {
+      const datos = await this.fireService.obtenerDatosId(id);
+      if (datos) {
+      } else {
+        console.log("Documento no encontrado");
+      }
+    } catch (error) {
     }
   }
+
+  // Método para editar datos
+  async editarDatos(data: any, id: string) {
+    try {
+      await this.fireService.editarDatos(data, id);
+      this.getDatos();
+    } catch (error) {
+    }
+  }
+
+  // Método para borrar datos
+  async borrarDatos(id: any) {
+    try {
+      await this.fireService.eliminarDatos(id);
+      this.getDatos();
+    } catch (error) {
+    }
+  }
+
+  redirigirALosDetalles(id: string) {
+    // Aquí puedes construir la URL según tu enrutador y redirigir
+    this.router.navigate(['/detalles', id]);
+  }
+
 }
