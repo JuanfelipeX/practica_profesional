@@ -71,7 +71,6 @@ export class InicioComponent implements OnInit {
   }
 
   redirigirALosDetalles(id: string) {
-    // Aquí puedes construir la URL según tu enrutador y redirigir
     this.router.navigate(['/detalles', id]);
   }
 
