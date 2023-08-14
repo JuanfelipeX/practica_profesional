@@ -74,4 +74,8 @@ export class InicioComponent implements OnInit {
     this.router.navigate(['/detalles', id]);
   }
 
+  redirigirActualizacion(id: string) {
+    this.router.navigate(['/actualizar', id]);
+  }
+
 }

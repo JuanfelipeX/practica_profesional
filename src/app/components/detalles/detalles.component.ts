@@ -9,7 +9,6 @@ import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 })
 export class DetallesComponent implements OnInit {
 
-
   detalle: any;
 
   constructor(

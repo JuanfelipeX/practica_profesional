@@ -1,0 +1,24 @@
+<div class="container my-5">
+  <div *ngIf="detalle" class="card">
+    <div class="card-body">
+      <h2 class="card-title">Detalles del elemento {{ detalle.id }}</h2>
+      <p><strong>Nombre:</strong> {{ detalle.nombre }}</p>
+      <!-- Otros campos de detalles aquí -->
+
+      <div *ngIf="!modoEdicion" class="mb-3">
+        <button class="btn btn-primary" (click)="habilitarModoEdicion()">Editar</button>
+      </div>
+
+      <div *ngIf="modoEdicion" class="border-top pt-3 mt-3">
+        <h3 class="card-title">Editar detalles</h3>
+        <input class="form-control mb-3" [(ngModel)]="nuevoNombre" placeholder="Nuevo nombre">
+        <!-- Otros campos de edición aquí -->
+
+        <div class="btn-group">
+          <button class="btn btn-success" (click)="guardarCambios()">Guardar Cambios</button>
+          <button class="btn btn-secondary" (click)="cancelarEdicion()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

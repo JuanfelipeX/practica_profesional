@@ -44,8 +44,8 @@
                                     <h4 class="card-title text-center">{{element.nombre}}</h4>
                                 </div>
                                 <div class="col-1">
-                                    <a [href]="'http://localhost:4200/herramienta-actualizar/' + element.id">
-                                        <i class="fa-regular fa-pen-to-square" style="color: #000;"></i>
+                                    <a><i class="fa-regular fa-pen-to-square" style="color: #000;"
+                                            (click)="redirigirActualizacion(element.id)"></i>
                                     </a>
                                     <a (click)="borrarDatos(element.id)">
                                         <i class="fa-solid fa-trash"></i>
@@ -59,7 +59,7 @@
                 <div class="d-flex justify-content-center mx-4 mb-4">
                     <a>
                         <button type="button" class="btn btn-primary btn-sm"
-                            (click)="redirigirALosDetalles(element.id)">Obtener por ID</button>
+                            (click)="redirigirALosDetalles(element.id)">Ver mas</button>
                     </a>
                 </div>
             </div>

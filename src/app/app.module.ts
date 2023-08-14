@@ -16,6 +16,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { DetallesComponent } from './components/detalles/detalles.component';
+import { ActualizacionComponent } from './components/actualizacion/actualizacion.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DetallesComponent } from './components/detalles/detalles.component';
     HeaderComponent,
     FooterComponent,
     DetallesComponent,
+    ActualizacionComponent,
   ],
   imports: [
     BrowserModule,
