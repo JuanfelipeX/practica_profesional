@@ -1,5 +1,7 @@
 Link: https://practica-profesional-f8422.web.app
 
+para subir deploy a firebase es con firebase deploy en la terminal
+
 # TrabajoGradoFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
