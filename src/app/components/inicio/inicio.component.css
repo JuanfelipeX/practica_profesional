@@ -52,12 +52,17 @@
 }
 
 /* Para el efecto sombra al pasar por encima el mouse */
-.card-section:hover {
-	box-shadow: 1px 1px 20px #747474;
+.card-section1:hover {
+	box-shadow: 1px 1px 20px #a14448;
 }
 
-.card-section-striped {
-    background: linear-gradient(-45deg, transparent 5%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05));
-    background-size: 8px 8px;
+/* Para el efecto sombra al pasar por encima el mouse */
+.card-section2:hover {
+	box-shadow: 1px 1px 20px #523399;
+}
+
+/* Para el efecto sombra al pasar por encima el mouse */
+.card-section3:hover {
+	box-shadow: 1px 1px 20px #074e42;
 }
 
