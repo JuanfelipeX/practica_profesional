@@ -18,6 +18,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { ActualizacionComponent } from './components/actualizacion/actualizacion.component';
 import { CrearComponent } from './components/crear/crear.component';
+import { FrameworkComponent } from './components/framework/framework.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CrearComponent } from './components/crear/crear.component';
     DetallesComponent,
     ActualizacionComponent,
     CrearComponent,
+    FrameworkComponent,
   ],
   imports: [
     BrowserModule,

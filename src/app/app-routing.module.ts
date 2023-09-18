@@ -7,6 +7,7 @@ import { ErrorNoEncontradoComponent } from './components/error-no-encontrado/err
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
+import { FrameworkComponent } from './components/framework/framework.component';
 
 const routes: Routes = [
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'crear', component: CrearComponent },
   { path: 'detalles/:id', component: DetallesComponent },
   { path: 'actualizar/:id', component: ActualizacionComponent },
+  { path: 'framework', component: FrameworkComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', component: ErrorNoEncontradoComponent }, //Sitio Web No Encontrado 404
 ];
