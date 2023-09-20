@@ -83,8 +83,7 @@ export class InicioComponent implements OnInit {
 
 
   abrirModal() {
-    const modalRef = this.modalService.open(FrameworkComponent, {
-    });
+    const modalRef = this.modalService.open(FrameworkComponent, {size: 'xl', windowClass: 'modal-xxl'});
     // Puedes pasar datos al componente del modal utilizando la siguiente línea
     // modalRef.componentInstance.data = tuData;
   }
