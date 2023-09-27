@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FirebaseService } from 'src/app/services/firebase/firebase.service';
+import { FrameworkComponent } from '../framework/framework.component';
 
 @Component({
   selector: 'app-detalles',
@@ -13,7 +15,9 @@ export class DetallesComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private fireService: FirebaseService
+    private fireService: FirebaseService,
+    private router: Router,
+    private modalService: NgbModal
   ) { }
 
   ngOnInit(): void {
@@ -28,5 +32,10 @@ export class DetallesComponent implements OnInit {
       this.detalle = detalle;
     }).catch(error => {
     });
+  }
+
+  
+  abrirModal() {
+    const modalRef = this.modalService.open(FrameworkComponent, { size: 'xl', windowClass: 'modal-xxl' });
   }
 }

@@ -1,6 +1,55 @@
+<app-header></app-header>
+
 <div *ngIf="detalle">
-    <h2>Detalles del elemento {{ detalle.id }}</h2>
-    <p>Nombre: {{ detalle.nombre }}</p>
-    <!-- Otros campos y detalles aquí -->
+  <h2>Detalles del elemento {{ detalle.id }}</h2>
+  <p>Nombre: {{ detalle.nombre }}</p>
+  <!-- Otros campos y detalles aquí -->
+</div>
+
+<div class="container p-4">
+  <div class="row">
+
+    <div class="col-8">
+      <h4>Provee Soluciones Como</h4>
+      <h1>Titulo de la Parte del FW </h1>
+      <h6>Guia N# </h6>
+    </div>
+
+    <div class="col-4">
+      <div class="image-button">
+        <img src="../../../assets/images/mini-framework.PNG" alt="Descripción de la imagen" (click)="abrirModal()">
+      </div>
+    </div>
+
+    <div class="mt-4 mb-4 pb-2 pt-4 col-12" style="background-color: rgba(0, 0, 0, 0.05);">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, voluptate. Ratione tempora eveniet deleniti
+        incidunt quidem tenetur tempore consectetur rerum unde soluta a ullam, consequuntur repellendus voluptates
+        placeat odio veniam.</p>
+    </div>
+
+    <div class="col-12">
+      <h1>Puntos Claves</h1>
+    </div>
+
+    <div class="col-12 p-2">
+      <div class="card">
+        <div class="card-header">
+          Punto N#...
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Titulo del Punto Clave</p>
+            <footer class="blockquote-footer">Pequeña Descripcion
+              <br>
+              <cite title="Source Title">Link</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
   </div>
-  
+</div>
+
+
+
+<app-footer></app-footer>
