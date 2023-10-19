@@ -1,5 +1,14 @@
 <app-header></app-header>
 
+<!-- Breadcrumb https://getbootstrap.com/docs/4.0/components/breadcrumb/ -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+
+
 <div *ngIf="detalle">
   <h2>Detalles del elemento {{ detalle.id }}</h2>
   <p>Nombre: {{ detalle.nombre }}</p>
