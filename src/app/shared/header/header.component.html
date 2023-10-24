@@ -14,7 +14,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categoria A
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#"
+                        <a class="dropdown-item" [href]="'detalles/' + element.id"
                             *ngFor="let element of listaGetDatosCategoriaA">{{element.nombre}}</a>
                     </div>
                 </li>
@@ -25,7 +25,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categoria B
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#"
+                        <a class="dropdown-item"  [href]="'detalles/' + element.id"
                             *ngFor="let element of listaGetDatosCategoriaB">{{element.nombre}}</a>
                     </div>
                 </li>

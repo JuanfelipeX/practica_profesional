@@ -9,9 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class FirebaseService {
 
+
   constructor(
     private firestore: Firestore,
-    private router: Router
+    private router: Router,
   ) {
   }
 
@@ -32,6 +33,21 @@ export class FirebaseService {
       return { id: datosSnap.id, ...datosSnap.data() };
     }
     return null;
+  }
+  
+  async obtenerDatosPorIdEnColecciones(id: string): Promise<any> {
+    const colecciones = ['Categoria_A', 'Categoria_B', 'Categoria_C'];
+    let resultados = [];
+  
+    for (const coleccion of colecciones) {
+      const datosRef = doc(this.firestore, `${coleccion}/${id}`);
+      const datosSnap = await getDoc(datosRef);
+  
+      if (datosSnap.exists()) {
+        resultados.push({ id: datosSnap.id, ...datosSnap.data() });
+      }
+    }
+    return resultados.length > 0 ? resultados : null;
   }
 
   async editarDato(data: any, id: string): Promise<void> {

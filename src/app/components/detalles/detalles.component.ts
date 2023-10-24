@@ -28,13 +28,14 @@ export class DetallesComponent implements OnInit {
   }
 
   obtenerDetalle(id: string) {
-    this.fireService.obtenerDatosId(id).then(detalle => {
-      this.detalle = detalle;
+    this.fireService.obtenerDatosPorIdEnColecciones(id).then(detalle => {
+      this.detalle = detalle[0];
+      // console.log(detalle);
     }).catch(error => {
     });
   }
 
-  
+
   abrirModal() {
     const modalRef = this.modalService.open(FrameworkComponent, { size: 'xl', windowClass: 'modal-xxl' });
   }

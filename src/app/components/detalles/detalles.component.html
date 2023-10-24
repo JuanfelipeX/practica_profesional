@@ -1,27 +1,23 @@
 <app-header></app-header>
 
 <!-- Breadcrumb https://getbootstrap.com/docs/4.0/components/breadcrumb/ -->
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb" *ngIf="detalle">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Detalles</li>
+    <li class="breadcrumb-item active" aria-current="page"> {{ detalle.id }}</li>
   </ol>
 </nav>
 
 
-<div *ngIf="detalle">
-  <h2>Detalles del elemento {{ detalle.id }}</h2>
-  <p>Nombre: {{ detalle.nombre }}</p>
-  <!-- Otros campos y detalles aquí -->
-</div>
 
-<div style="background-color: #df5573; border-radius: 0 0 30% 30%;">
+<div style="background-color: #df5573; border-radius: 0 0 30% 30%;" *ngIf="detalle">
   <div class="container p-4">
     <div class="row">
 
       <div class="col-8" style="color: white;">
         <h4>Provee Soluciones Como</h4>
-        <h1>Titulo de la Parte del FW </h1>
+        <h1>{{ detalle.nombre}} </h1>
         <h6>Guia N# </h6>
       </div>
 
