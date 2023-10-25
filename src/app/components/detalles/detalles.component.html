@@ -1,17 +1,18 @@
 <app-header></app-header>
 
-<!-- Breadcrumb https://getbootstrap.com/docs/4.0/components/breadcrumb/ -->
-<nav aria-label="breadcrumb" *ngIf="detalle">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Detalles</li>
-    <li class="breadcrumb-item active" aria-current="page"> {{ detalle.id }}</li>
-  </ol>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0, 0, 0, 0.05);">
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Detalles</li>
+        <li class="breadcrumb-item active" aria-current="page"> {{ detalle.id }}</li>
+      </ol>
+    </nav>
+  </div>
 </nav>
 
-
-
-<div style="background-color: #df5573; border-radius: 0 0 30% 30%;" *ngIf="detalle">
+<div style="border-radius: 0 0 30% 30%;" [style.background-color]="detalle.color" *ngIf="detalle">
   <div class="container p-4">
     <div class="row">
 
