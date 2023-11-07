@@ -10,12 +10,12 @@ import { RegistrarseComponent } from './components/registrarse/registrarse.compo
 import { FrameworkComponent } from './components/framework/framework.component';
 
 const routes: Routes = [
-  { path: 'iniciar-sesion', component: IniciarSesionComponent },
-  { path: 'registrarse', component: RegistrarseComponent },
+  // { path: 'iniciar-sesion', component: IniciarSesionComponent }, 
+  // { path: 'registrarse', component: RegistrarseComponent },
+  // { path: 'crear', component: CrearComponent },
+  // { path: 'actualizar/:id', component: ActualizacionComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'crear', component: CrearComponent },
   { path: 'detalles/:id', component: DetallesComponent },
-  { path: 'actualizar/:id', component: ActualizacionComponent },
   { path: 'framework', component: FrameworkComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', component: ErrorNoEncontradoComponent }, //Sitio Web No Encontrado 404
@@ -25,4 +25,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
