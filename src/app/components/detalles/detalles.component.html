@@ -16,15 +16,15 @@
   <div class="container p-4">
     <div class="row">
 
-      <div class="col-8" style="color: white;">
+      <div class="col-9" style="color: white;">
         <h4>Provee Soluciones Como</h4>
         <h1>{{ detalle.nombre}} </h1>
         <h6>Guia N# </h6>
       </div>
 
-      <div class="col-4">
+      <div class="col-3">
         <div class="image-button">
-          <img src="../../../assets/images/mini-framework.png" alt="Descripción de la imagen" (click)="abrirModal()">
+          <img [src]="detalle.imagen" style="width: 150px; height: 100px;" alt="Descripción de la imagen" (click)="abrirModal()">
         </div>
       </div>
 
