@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CategoriaAService } from 'src/app/services/categoria-a/categoria-a.service';
-import { CategoriaBService } from 'src/app/services/categoria-b/categoria-b.service';
+import { HerramientasService } from 'src/app/services/herramientas/herramientas.service';
+import { MetodologiasService } from 'src/app/services/metodologias/metodologias.service';
+import { RecomendacionesService } from 'src/app/services/recomendaciones/recomendaciones.service';
 
 @Component({
   selector: 'app-header',
@@ -10,22 +11,26 @@ import { CategoriaBService } from 'src/app/services/categoria-b/categoria-b.serv
 })
 export class HeaderComponent implements OnInit {
   verificadorBool: boolean = false;
-  listaGetDatosCategoriaA: any = [];
-  listaGetDatosCategoriaB: any = [];
+  listaGetRecomendaciones: any = [];
+  listaGetDatosMetodologia: any = [];
+  listaGetDatosHerramientas: any = [];
 
-  constructor(private router: Router, private categoriaAService: CategoriaAService, private categoriaBService: CategoriaBService) {
+
+
+  constructor(private router: Router, private recomendacionesService: RecomendacionesService, private metodologiasService: MetodologiasService, private herramientasService: HerramientasService) {
     this.verifyLooged();
-    this.getDatosCategoriaA();
-    this.getDatosCategoriaB();
+    this.getDatosRecomendaciones();
+    this.getDatosMetodologias();
+    this.getDatosHerramientas();
   }
 
   ngOnInit(): void { }
 
-  // Método para obtener los datos de la Categiria A
-  getDatosCategoriaA() {
-    this.categoriaAService.obtenerDatos().subscribe({
+  // Método para obtener los datos de la categoria Recomendaciones
+  getDatosRecomendaciones() {
+    this.recomendacionesService.obtenerDatos().subscribe({
       next: (data: any) => {
-        this.listaGetDatosCategoriaA = data;
+        this.listaGetRecomendaciones = data;
       },
       error: (err) => {
       },
@@ -33,16 +38,27 @@ export class HeaderComponent implements OnInit {
   }
 
   
-  // Método para obtener los datos de la Categiria A
-  getDatosCategoriaB() {
-    this.categoriaBService.obtenerDatos().subscribe({
+  // Método para obtener los datos de la categoria Metodologias
+  getDatosMetodologias() {
+    this.metodologiasService.obtenerDatos().subscribe({
       next: (data: any) => {
-        this.listaGetDatosCategoriaB = data;
+        this.listaGetDatosMetodologia = data;
       },
       error: (err) => {
       },
     });
   }
+
+    // Método para obtener los datos de la categoria Herramoemtas
+    getDatosHerramientas() {
+      this.herramientasService.obtenerDatos().subscribe({
+        next: (data: any) => {
+          this.listaGetDatosHerramientas = data;
+        },
+        error: (err) => {
+        },
+      });
+    }
 
   verifyLooged() {
     if (localStorage.getItem('contrasena')) {

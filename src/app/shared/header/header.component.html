@@ -8,37 +8,36 @@
                         [href]="'http://localhost:4200/inicio'">Inicio</a>
                 </li>
 
-                <!-- Categoria A -->
+                <!-- Categoria Recomendaciones -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categoria A
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recomendaciones / Lineamientos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" [href]="'detalles/' + element.id"
-                            *ngFor="let element of listaGetDatosCategoriaA">{{element.nombre}}</a>
+                            *ngFor="let element of listaGetRecomendaciones">{{element.seccion}}</a>
                     </div>
                 </li>
 
-                <!-- Categoria B -->
+                <!-- Categoria Metodologias -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categoria B
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Metodologias y Estrategias
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item"  [href]="'detalles/' + element.id"
-                            *ngFor="let element of listaGetDatosCategoriaB">{{element.nombre}}</a>
+                            *ngFor="let element of listaGetDatosMetodologia">{{element.seccion}}</a>
                     </div>
                 </li>
 
-                <!-- Categoria C -->
-                <li class="nav-item dropdown">
+                   <!-- Categoria Herramientas -->
+                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categoria C
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Herramientas
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Interes A</a>
-                        <a class="dropdown-item" href="#">Interes B</a>
-                        <a class="dropdown-item" href="#">Interes C</a>
+                        <a class="dropdown-item"  [href]="'detalles/' + element.id"
+                            *ngFor="let element of listaGetDatosHerramientas">{{element.seccion}}</a>
                     </div>
                 </li>
             </ul>

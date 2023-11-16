@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { collection, collectionData, Firestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { ConfigurationService } from '../configuration.service';
 
 @Injectable({
@@ -11,10 +13,16 @@ export class HerramientasService {
 
   constructor(
     private configuration: ConfigurationService,
+    private firestore: Firestore,
     private http: HttpClient,
     private router: Router
   ) {
     this.URL_BASE = this.configuration.getUrlBase();
+  }
+
+  obtenerDatos(): Observable<any> {
+    const datosRef = collection(this.firestore, 'Herramientas');
+    return collectionData(datosRef, { idField: 'id' }) as Observable<any>;
   }
 
   crearHerramienta(data: any) {

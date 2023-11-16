@@ -35,8 +35,23 @@ export class FirebaseService {
     return null;
   }
   
+  // async obtenerDatosPorIdEnColecciones(id: string): Promise<any> {
+  //   const colecciones = ['Categoria_A', 'Categoria_B', 'Categoria_C'];
+  //   let resultados = [];
+  
+  //   for (const coleccion of colecciones) {
+  //     const datosRef = doc(this.firestore, `${coleccion}/${id}`);
+  //     const datosSnap = await getDoc(datosRef);
+  
+  //     if (datosSnap.exists()) {
+  //       resultados.push({ id: datosSnap.id, ...datosSnap.data() });
+  //     }
+  //   }
+  //   return resultados.length > 0 ? resultados : null;
+  // }
+
   async obtenerDatosPorIdEnColecciones(id: string): Promise<any> {
-    const colecciones = ['Categoria_A', 'Categoria_B', 'Categoria_C'];
+    const colecciones = ['Recomendaciones', 'Metodologias', 'Herramientas'];
     let resultados = [];
   
     for (const coleccion of colecciones) {
