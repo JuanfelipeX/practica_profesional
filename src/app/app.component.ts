@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'trabajo-grado-front';
+  title = 'Sitio Web Interactivo para la Representación Gráfica y Esquematización de un Marco Conceptual de Accesibilidad y Usabilidad Web';
 }

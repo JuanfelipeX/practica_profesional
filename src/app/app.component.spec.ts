@@ -20,7 +20,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'trabajo-grado-front'`, () => {
+  it(`should have as title 'Sitio Web Interactivo para la Representación Gráfica y Esquematización de un Marco Conceptual de Accesibilidad y Usabilidad Web'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('trabajo-grado-front');
@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('trabajo-grado-front app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Sitio Web Interactivo para la Representación Gráfica y Esquematización de un Marco Conceptual de Accesibilidad y Usabilidad Web is running!');
   });
 });

@@ -1,12 +1,19 @@
 {
-  "hosting": {
-    "public": "dist/trabajo-grado-front",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  },
+  "hosting": [
+    {
+      "public": "dist/trabajo-grado-front",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "trabajo-grado-front",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ],
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"

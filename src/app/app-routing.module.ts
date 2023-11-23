@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ActualizacionComponent } from './components/actualizacion/actualizacion.component';
-import { CrearComponent } from './components/crear/crear.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { ErrorNoEncontradoComponent } from './components/error-no-encontrado/error-no-encontrado.component';
-import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { InicioComponent } from './components/inicio/inicio.component';
-import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 import { FrameworkComponent } from './components/framework/framework.component';
 
 const routes: Routes = [

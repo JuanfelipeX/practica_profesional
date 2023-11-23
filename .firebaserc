@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "practica-profesional-f8422"
+  },
+  "targets": {
+    "practica-profesional-f8422": {
+      "hosting": {
+        "trabajo-grado-front": [
+          "practica-profesional-f8422"
+        ]
+      }
+    }
   }
 }
